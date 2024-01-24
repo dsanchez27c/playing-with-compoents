@@ -1,0 +1,23 @@
+.who-to-follow-container {
+  border-radius: 20px;
+  background-color: #16181c;
+  width: 30rem;
+  max-width: 30rem;
+}
+
+.who-to-follow-container .who-to-follow-title {
+  margin: 0.5rem 0rem;
+  padding-left: 1rem;
+}
+
+.who-to-follow-container .who-to-follow-show-more {
+  padding: 1rem 0rem 1rem 1rem;
+  margin: 0;
+  color: #4399d5;
+  cursor: pointer;
+  border-radius: 0px 0px 20px 20px;
+}
+
+.who-to-follow-container .who-to-follow-show-more:hover{
+    background-color: #1d1f23;
+}

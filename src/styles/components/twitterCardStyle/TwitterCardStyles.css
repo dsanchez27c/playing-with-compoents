@@ -1,0 +1,84 @@
+.twitter-card-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.7rem 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  cursor: pointer;
+}
+
+.twitter-card-container:hover {
+  background-color: #1d1f23;
+}
+
+.twitter-card-container .twitter-card-header {
+  display: flex;
+  margin-right: 20px;
+}
+
+.twitter-card-container .twitter-card-header .twitter-card-userimg {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  margin-right: 14px;
+}
+
+.twitter-card-container
+  .twitter-card-header
+  .twitter-card-userinfo
+  section
+  .twitter-card-name {
+  color: #585c61;
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+.twitter-card-container
+  .twitter-card-header
+  .twitter-card-userinfo
+  .twitter-card-nameuser:hover {
+  text-decoration: underline;
+}
+
+.twitter-card-container
+  .twitter-card-header
+  .twitter-card-userinfo
+  section
+  .twitter-card-follow-status {
+  background-color: #23262b;
+  font-size: 12px;
+  padding: 0.2rem 0.4rem;
+  border-radius: 25px;
+  font-weight: 500;
+
+  color: #585c61;
+  font-weight: 700;
+}
+
+.twitter-card-container .twitter-card-btn-container {
+  display: flex;
+  align-items: center;
+}
+
+.twitter-card-container .twitter-card-btn-container .twitter-card-btn {
+  cursor: pointer;
+  color: #1d1f23;
+  background-color: #FFFFFF;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  padding: 0.5rem 0.6rem;
+  font-weight: 600;
+  font-size: 12px;
+  transition: .3s ease;
+}
+
+.twitter-card-container .twitter-card-btn-container .twitter-card-btn:hover{
+  background-color: #408bc9;
+}
+
+.twitter-card-container .twitter-card-btn-container .is-following:hover{
+  outline: none;
+  color: white;
+  background-color: red;
+}
