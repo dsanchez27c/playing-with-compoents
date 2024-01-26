@@ -43,8 +43,7 @@ function ItemList() {
     input.value = "";
   };
 
-  const deleteItem = (id) => {
-    console.log("id: ", id);
+  const handleDelete = (id) => () => {
     setItems((prevItems) => {
       return prevItems.filter((currentItem) => currentItem.id !== id);
     });
@@ -73,7 +72,9 @@ function ItemList() {
       </aside>
       <section className="item-list-container">
         {items.length === 0 ? (
-          <p>Añade nuevas tareas por hacer...</p>
+          <p>
+            <strong>Añade nuevas tareas por hacer...</strong>
+          </p>
         ) : (
           <ul>
             {items.map((item) => {
@@ -81,7 +82,7 @@ function ItemList() {
               return (
                 <li key={id}>
                   {text}
-                  <button onClick={() => deleteItem(id)}>Eliminar</button>
+                  <button onClick={handleDelete(id)}>Eliminar</button>
                 </li>
               );
             })}
