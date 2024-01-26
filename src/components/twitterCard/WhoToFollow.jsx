@@ -41,7 +41,7 @@ function WhoToFollow() {
         },
     ]
 
-    console.log(whoToFollowData);
+    // console.log(whoToFollowData);
 
   return (
     <div className="who-to-follow-container containers">

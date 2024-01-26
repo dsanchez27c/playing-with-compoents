@@ -11,18 +11,20 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
 }
 
-.main-content{
+.main-content {
   display: flex;
-  justify-content: space-between;
+  align-items: start;
+  justify-content: space-around;
 }
 
-.containers{
+.containers {
   outline: 1px solid #c4c4c4;
 }
-

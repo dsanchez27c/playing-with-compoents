@@ -3,6 +3,7 @@
   background-color: #16181c;
   width: 30rem;
   max-width: 30rem;
+  height: 21rem;
 }
 
 .who-to-follow-container .who-to-follow-title {
@@ -18,6 +19,6 @@
   border-radius: 0px 0px 20px 20px;
 }
 
-.who-to-follow-container .who-to-follow-show-more:hover{
-    background-color: #1d1f23;
+.who-to-follow-container .who-to-follow-show-more:hover {
+  background-color: #1d1f23;
 }
