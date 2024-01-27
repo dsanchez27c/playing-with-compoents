@@ -14,6 +14,9 @@
 .twitter-card-container .twitter-card-header {
   display: flex;
   margin-right: 20px;
+  max-width: 18vw;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .twitter-card-container .twitter-card-header .twitter-card-userimg {
@@ -67,18 +70,40 @@
   border: none;
   outline: none;
   border-radius: 25px;
-  padding: 0.5rem 0.6rem;
+  padding: 0.5rem;
   font-weight: 600;
   font-size: 12px;
-  transition: .3s ease;
+  transition: all .3s ease;
+  width: 8rem;
+
+  position: relative;
 }
 
 .twitter-card-container .twitter-card-btn-container .twitter-card-btn:hover{
-  background-color: #408bc9;
+  background-color: #c2c2c2;
 }
 
 .twitter-card-container .twitter-card-btn-container .is-following:hover{
   outline: none;
-  color: white;
-  background-color: red;
+  color: #ff0000;
+  background-color: #ff00001e;
+  outline: 1px solid #ff0000;
+}
+
+.twitter-card-container .twitter-card-btn-container .is-following{
+  background-color: transparent;
+  color: #fff;
+  outline: 1px solid #585c61;
+}
+
+.twitter-card-container .twitter-card-btn-container button .twitter-card-btn-stop-follow{
+  display: none;
+}
+
+.twitter-card-container .twitter-card-btn-container .is-following:hover .twitter-card-btn-is-following{
+  display: none;
+}
+
+.twitter-card-container .twitter-card-btn-container .is-following:hover .twitter-card-btn-stop-follow{
+  display: block;
 }
