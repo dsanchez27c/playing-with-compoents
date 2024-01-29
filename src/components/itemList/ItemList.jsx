@@ -1,10 +1,12 @@
 import React from "react";
 import "./../../styles/components/itemListStyle/itemListStyles.css";
 import Item from "./Item";
-import { useItems } from "../../hooks/itemList/useItems";
+// import { useItems } from "../../hooks/itemList/useItems";
+import { useItemsReducer } from "../../hooks/itemList/useItemsReducer";
 
 function ItemList() {
-  const { items, addItem, removeItem } = useItems();
+  // const { items, addItem, removeItem } = useItems();
+  const { items, addItem, removeItem } = useItemsReducer();
 
   const handleSubmit = (event) => {
     event.preventDefault();
