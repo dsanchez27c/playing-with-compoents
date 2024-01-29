@@ -1,25 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import "./../../styles/components/itemListStyle/itemListStyles.css";
-
-const initialItems = [
-  {
-    id: crypto.randomUUID(),
-    timestamp: Date.now(),
-    text: "Terminar los deberes.",
-  },
-  {
-    id: crypto.randomUUID(),
-    timestamp: Date.now(),
-    text: "Practicar dibujo.",
-  },
-];
-
-// console.log("initialItems =>", initialItems);
+import Item from "./Item";
+import { useItems } from "../../hooks/itemList/useItems";
 
 function ItemList() {
-  const [items, setItems] = useState(initialItems);
-
-  console.log(items);
+  const { items, addItem, removeItem } = useItems();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -30,23 +15,13 @@ function ItemList() {
 
     if (!isInput || input == null) return;
 
-    const newItem = {
-      id: crypto.randomUUID(),
-      timestamp: Date.now(),
-      text: input.value,
-    };
-
-    setItems((prevItems) => {
-      return [...prevItems, newItem];
-    });
+    addItem(input.value);
 
     input.value = "";
   };
 
   const handleDelete = (id) => () => {
-    setItems((prevItems) => {
-      return prevItems.filter((currentItem) => currentItem.id !== id);
-    });
+    removeItem(id);
   };
 
   return (
@@ -56,7 +31,7 @@ function ItemList() {
         <h3 className="item-list-subtitle">
           Añadir y eliminar elementos de una lista.
         </h3>
-        <form onSubmit={handleSubmit}>
+        <form aria-label="add items to the list" onSubmit={handleSubmit}>
           <label htmlFor="itemText">
             Introduce una tarea:
             <input
@@ -80,10 +55,7 @@ function ItemList() {
             {items.map((item) => {
               const { id, text } = item;
               return (
-                <li key={id}>
-                  {text}
-                  <button onClick={handleDelete(id)}>Eliminar</button>
-                </li>
+                <Item key={id} text={text} handleDelete={handleDelete(id)} />
               );
             })}
           </ul>
